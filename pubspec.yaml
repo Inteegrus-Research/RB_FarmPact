@@ -1,0 +1,72 @@
+name: farmpact
+description: FarmPact - Advanced farmer's application for risk assessment, location tracking, and farm management
+
+publish_to: "none"
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI/UX packages
+  google_fonts: ^6.1.0
+  syncfusion_flutter_gauges: ^23.2.7
+  fl_chart: ^0.66.2
+  shimmer: ^3.0.0
+
+  # Location & Maps
+  geolocator: ^10.1.0
+  google_maps_flutter: ^2.6.0
+  geocoding: ^2.1.1
+  location: ^5.0.3
+
+  # Notifications & Communications
+  flutter_local_notifications: ^17.2.2
+  url_launcher: ^6.2.5
+  permission_handler: ^11.3.0
+
+  # Storage & State Management
+  shared_preferences: ^2.2.2
+  provider: ^6.1.1
+  sqflite: ^2.3.2
+  path: ^1.9.0
+
+  # Image & Media
+  image_picker: ^1.0.7
+  cached_network_image: ^3.3.1
+
+  # HTTP & API
+  http: ^1.2.1
+  dio: ^5.4.1
+
+  # Utilities
+  cupertino_icons: ^1.0.2
+  intl: ^0.18.1
+  uuid: ^4.3.3
+  path_provider: ^2.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/maps/
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/icons/app_icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#4CAF50"
+  adaptive_icon_foreground: "assets/icons/app_icon.png"
