@@ -1,60 +1,89 @@
-# Sarvam - Farmer's Assistant App
+# FarmPact 🌾
 
-A Flutter application designed specifically for Indian farmers to assess livestock health risks, receive weather advisories, and access educational resources. The app prioritizes accessibility, clarity, and ease of use for users with varying levels of digital literacy.
+A comprehensive Flutter application designed to empower farmers with modern agricultural tools and livestock management solutions. Built for the Smart India Hackathon (SIH), FarmPact provides real-time livestock monitoring, health analytics, weather advisories, and veterinary consultation services to enhance farm productivity and animal welfare.
 
 ## Features
 
 ### 🎯 Core Features
 
-- **Risk Assessment Dashboard**: Visual risk score gauge with color-coded indicators
-- **OTP-based Authentication**: Simple mobile number verification system
-- **Weather Advisory**: Real-time weather conditions with actionable farming advice
-- **Health Trends**: Visual mortality trends and livestock health monitoring
-- **Learning Resources**: Educational videos and articles for farmers
+- **Livestock Management Dashboard**: Comprehensive livestock tracking and health monitoring
+- **Real-time Analytics**: Visual charts and gauges for livestock data analysis
+- **Weather Integration**: Location-based weather updates with farming recommendations
+- **Veterinary Services**: Connect with local veterinarians and emergency contacts
+- **Daily Reporting**: Track daily livestock activities and health metrics
+- **Smart Notifications**: Alerts for health issues, weather warnings, and scheduled activities
+- **Map Integration**: GPS-enabled location services and area mapping
 
 ### 🎨 Design Philosophy
 
-- **Clarity First**: Large fonts, high-contrast colors, universally recognized icons
-- **Accessibility**: Designed for outdoor use with high contrast modes
-- **Trustworthy Aesthetic**: Clean, professional color palette
-- **Lightweight**: Optimized for low-end Android devices
+- **User-Centric Design**: Intuitive interface designed for farmers with varying technical backgrounds
+- **Outdoor Optimization**: High contrast colors and clear visibility for field use
+- **Performance First**: Lightweight and responsive for reliable performance on all devices
+- **Data-Driven Insights**: Visual analytics to help farmers make informed decisions
 
-### 🎨 UI/UX Highlights
+### 📱 Supported Platforms
 
-- **Farmer-Centric Design**: Tailored for users with varying digital literacy
-- **Outdoor Visibility**: High contrast colors for bright sunlight usage
-- **Large Touch Targets**: Prevents accidental taps on mobile devices
-- **Intuitive Navigation**: Simple, clear user flows
+- **Android**: Full native support with material design
+- **iOS**: Cross-platform compatibility
+- **Web**: Progressive web app capabilities
+- **Windows**: Desktop support for farm office management
 
 ## Tech Stack
 
-### Frontend
+### Frontend Technologies
 
-- **Flutter**: Cross-platform mobile development
-- **Google Fonts (Poppins)**: Clean, readable typography
-- **Syncfusion Flutter Gauges**: Risk score visualization
-- **FL Chart**: Health trends line charts
-- **Shimmer**: Professional loading states
+- **Flutter 3.0+**: Modern cross-platform framework
+- **Provider**: State management for reactive UI
+- **Google Maps**: Interactive mapping and location services
+- **FL Chart**: Advanced data visualization and analytics
+- **Syncfusion Gauges**: Professional gauge widgets for metrics
+- **HTTP**: RESTful API integration
+- **Geolocator**: GPS and location tracking
+- **Image Picker**: Camera and gallery integration
+- **Local Notifications**: Push notification system
 
-### Backend (Ready for Integration)
+### Backend & Services
 
-- **Firebase Core**: Authentication and backend services
-- **Cloud Firestore**: Real-time database for farm data
-- **Firebase Auth**: OTP verification system
+- **SQLite**: Local database for offline functionality
+- **Firebase (Optional)**: Cloud services and real-time sync
+- **Weather API**: Real-time weather data integration
+- **Maps API**: Location and mapping services
 
 ## Project Structure
 
 ```
 lib/
-├── main.dart                 # App entry point
-├── themes/
-│   └── theme.dart           # App-wide theming and colors
-├── screens/
-│   ├── login_screen.dart    # OTP authentication
-│   └── dashboard_screen.dart # Main risk assessment dashboard
-├── widgets/
-│   └── custom_widgets.dart  # Reusable UI components
-└── firebase_options.dart    # Firebase configuration
+├── main.dart                           # App entry point and initialization
+├── models/                            # Data models and structures
+│   ├── farmer_model.dart              # Farmer profile data model
+│   ├── livestock_model.dart           # Livestock data model
+│   └── alert_model.dart               # Alert and notification model
+├── providers/                         # State management providers
+│   ├── farmer_provider.dart           # Farmer data provider
+│   ├── livestock_provider.dart        # Livestock management provider
+│   ├── location_provider.dart         # GPS and location provider
+│   └── notification_provider.dart     # Notification management
+├── screens/                           # UI screens and pages
+│   ├── splash_screen.dart             # App launch screen
+│   ├── login_screen.dart              # Authentication screen
+│   ├── registration_screen.dart       # User registration
+│   ├── dashboard_screen.dart          # Main dashboard
+│   ├── enhanced_dashboard_screen.dart # Advanced dashboard features
+│   ├── livestock_data_entry_screen.dart # Livestock data input
+│   ├── livestock_analytics_screen.dart  # Data visualization
+│   ├── daily_report_screen.dart       # Daily activity reporting
+│   ├── map_view_screen.dart           # Interactive maps
+│   ├── veterinarian_contact_screen.dart # Vet services
+│   ├── profile_screen.dart            # User profile management
+│   └── main_navigation_screen.dart    # Bottom navigation
+├── services/                          # Business logic and APIs
+│   ├── database_service.dart          # Local database operations
+│   ├── location_service.dart          # GPS and mapping services
+│   └── notification_service.dart      # Push notifications
+├── widgets/                           # Reusable UI components
+│   └── custom_widgets.dart            # Custom widgets and components
+└── themes/
+    └── theme.dart                     # App theming and styling
 ```
 
 ## Setup Instructions
@@ -71,7 +100,7 @@ lib/
 1. **Clone the repository**:
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/SIBI-thinker/FarmPact.git
    cd FarmPact
    ```
 
@@ -81,12 +110,11 @@ lib/
    flutter pub get
    ```
 
-3. **Firebase Setup** (Optional for demo):
+3. **Configure API Keys** (Optional):
 
-   - Create a Firebase project
-   - Configure Android/iOS apps
-   - Download and replace `google-services.json` (Android) / `GoogleService-Info.plist` (iOS)
-   - Update `firebase_options.dart` with your project configuration
+   - Add your Google Maps API key in `android/app/src/main/AndroidManifest.xml`
+   - Configure weather API keys in the app settings
+   - Set up any required third-party service credentials
 
 4. **Run the app**:
    ```bash
@@ -204,7 +232,25 @@ For support and questions:
 - Contact the development team
 - Check the documentation wiki
 
+## Screenshots
+
+*Coming Soon - App screenshots and demo videos will be added here*
+
+## Team
+
+**SIH Team - SIBI-thinker**
+- Developed for Smart India Hackathon 2025
+- Focus: Agricultural Technology and Livestock Management
+
+## Acknowledgments
+
+- Smart India Hackathon organizers
+- Flutter and Dart communities
+- Open source contributors
+- Agricultural experts and farmers for valuable insights
+
 ---
 
-**Built with ❤️ for Indian Farmers**
-# FarmPact
+**Built with ❤️ for Farmers Everywhere**
+
+*Empowering Agriculture Through Technology*
